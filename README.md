@@ -4,28 +4,19 @@
 
 <a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/MHASpread_logo.png?raw=true" align="left" height="100" width="100"></a>
 
-### Install
+# Data required
+This model uses two sources of data `population` and `events` click here to see the format [click here](data_format.md) to see the format and data description
 
-Once you've installed the MHASpread package, you can run the disease spread simulation and control actions by executing the provided R script. The script consists of multiple sections, each performing different tasks.
-```R
-# Note: to install the stable version of the package
- devtools::install_github(repo = 'machado-lab/MHASpread',
-                         auth_token = 'paste_the_token_here')
-#load the package
-library(MHASpread)
-```
+## Model outputs 
+### Susceptible-Exposed(Latent)-Infectious-Recovered dynamics within a farm
+Example of stochastic dynamics of a farm  with 100 animals 
+<img width="600" alt="Screenshot 2024-06-20 at 1 45 52 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/bd556c86-8e72-43ca-94dd-1a437b9ef6d2">
 
-### 1. Data required
-This model uses two sources of data `population` and `events` click here to see the format [click here to see the format and data description](data_format.md)
+#### Epidemic Curves of a Population Farms
+Infected farms over time, considering different host species. 
 
+<img width="600" alt="Screenshot 2024-06-20 at 1 52 08 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/ebceeec0-47f9-40f4-b883-f39249ae40ad">
 
-#### 1. Model outputs 
-
-
-
-#### 3. Plot Initial Spread Epidemic Curves of Farms
-
-This section generates and saves plots of infected farms over time, considering different host species. The resulting plots are saved as PNG files.
 
 ```R
 # Plot infected farms curves considering all host species
