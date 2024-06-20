@@ -1,4 +1,4 @@
-# MHASpread:  A multi-host Animal Spread Stochastic Multilevel Model(version 2.5.0) 
+# MHASpread:  A multi-host Animal Spread Stochastic Multilevel Model(version 3.0.0) 
 
  ![generic4](https://img.shields.io/badge/SEIR_model-Up-green) ![generic3](https://img.shields.io/badge/Births_and_Deaths-Up-green) ![generic1](https://img.shields.io/badge/Spatial_Transmission-up-green) ![generic2](https://img.shields.io/badge/Animal_Movements-up-green) ![generic](https://img.shields.io/badge/Disease_Control_Actions-up-green)   
 
@@ -230,7 +230,7 @@ To run the code, execute each section sequentially in an R environment. Make sur
 
 ## License
 
-This code is provided under the [Proprietari License](LICENSE.md).
+This model source is provided under the [Proprietari License](LICENSE.md).
 
 ## Acknowledgments
 
