@@ -1,22 +1,28 @@
 # MHASpread:  A multi-host Animal Spread Stochastic Multilevel Model(version 2.5.0) 
 
-![generic](https://img.shields.io/badge/Control_actions-up-green) ![generic1](https://img.shields.io/badge/Spatial_transmission-up-green) ![generic2](https://img.shields.io/badge/Network_level-up-green) ![generic3](https://img.shields.io/badge/Vital_dynamics-Up-green) ![generic4](https://img.shields.io/badge/SEIR_model-Up-green)
+ ![generic4](https://img.shields.io/badge/SEIR_model-Up-green) ![generic3](https://img.shields.io/badge/Births_and_Deaths-Up-green) ![generic1](https://img.shields.io/badge/Spatial_Transmission-up-green) ![generic2](https://img.shields.io/badge/Animal_Movements-up-green) ![generic](https://img.shields.io/badge/Disease_Control_Actions-up-green)   
 
 <a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/MHASpread_logo.png?raw=true" align="left" height="100" width="100"></a>
 
-# Data required
-This model uses two sources of data `population` and `events` click here to see the format [click here](data_format.md) to see the format and data description
+# Model description
+This is a multi-host, single-pathogen, coupled multiscale model designed to simulate epidemic trajectories of disease. It incorporates various customizable control actions specific to different zones (such as infected, buffer, and surveillance zones) to include depopulation, vaccination, and animal movement standstills, among other countermeasures. The model relies on two main sources of data: `population` and `events`. For a detailed description of the data format, please refer to [click here](data_format.md).
 
 ## Model outputs 
 ### Susceptible-Exposed(Latent)-Infectious-Recovered dynamics within a farm
 Example of stochastic dynamics of a farm  with 100 animals 
-<img width="600" alt="Screenshot 2024-06-20 at 1 45 52 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/bd556c86-8e72-43ca-94dd-1a437b9ef6d2">
-
+<br />
+<img width="500" alt="Screenshot 2024-06-20 at 1 45 52 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/bd556c86-8e72-43ca-94dd-1a437b9ef6d2">
+<br />
 #### Epidemic Curves of a Population Farms
 Infected farms over time, considering different host species. 
-
-<img width="600" alt="Screenshot 2024-06-20 at 1 52 08 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/ebceeec0-47f9-40f4-b883-f39249ae40ad">
-
+<br />
+<img width="500"  alt="Screenshot 2024-06-20 at 1 52 08 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/ebceeec0-47f9-40f4-b883-f39249ae40ad">
+<br />
+#### Number of animals in each compartment considering a population farms 
+The number of infected animals for all host species(susceptible compartment was excluded from the plot to improve data visualization)
+<br/>
+<img width="500" alt="Screenshot 2024-06-20 at 1 57 20 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/e3abf095-b658-40ac-a6a8-d472443eb914">
+<br/>
 
 ```R
 # Plot infected farms curves considering all host species
