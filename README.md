@@ -5,7 +5,7 @@
 <a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/MHASpread_logo.png?raw=true" align="left" height="100" width="100"></a>
 
 # Model description
-This is a multi-host, single-pathogen, coupled multiscale model designed to simulate epidemic trajectories of disease. It incorporates various customizable control actions specific to different zones (such as infected, buffer, and surveillance zones) to include depopulation, vaccination, and animal movement standstills, among other countermeasures. The model relies on two main sources of data: `population` and `events`. For a detailed description of the data format, please refer to [click here](data_format.md).
+This is a multi-host, single-pathogen, coupled multiscale model designed to simulate epidemic trajectories of disease. It incorporates various customizable control actions specific to different zones (such as infected, buffer, and surveillance zones) to include depopulation, vaccination, and animal movement standstills, among other countermeasures. The model relies on two main sources of data: `population` and `events`. For a detailed description of the data format, please refer to [click here](data_format.md). 
 
 ## Model outputs 
 ### Susceptible-Exposed(Latent)-Infectious-Recovered dynamics within a farm
@@ -33,23 +33,20 @@ Evaluate the performance of the simulated control action
 A complete example code is provided [here.](example_script.rm). To run the code, execute each section sequentially in an R environment. Make sure to adjust the parameters and file paths as needed for your specific simulation scenario.
 
 ## License
-
 This model source is provided under the [Proprietari License](LICENSE.md).
 
+## Citation 
+The pre-print of this model is [available here](https://www.biorxiv.org/content/10.1101/2022.06.14.496159v3)
+
 ## Acknowledgments
-
-The disease spread simulation and control actions code are part of the MHASpread package developed by the Machado Lab. Special thanks to the contributors and developers of the package.
-
-Feel free to explore and adapt this code for your disease spread modeling and control research. If you have any questions or issues, please open an [issue](https://github.com/machado-lab/MHASPREAD-model/issues) on this GitHub repository.
-
-
+This model is funded by FUNDESA RS
 
 ## Authors
 Nicolas Cardenas [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0001-7884-2353) <br />
 Gustavo Machado [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0001-7552-6144)
 
 ## Developers
-:computer: Nicolas Cardenas [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0001-7884-2353) at the [Machado lab](https://machado-lab.github.io/) and 
+:computer: Nicolas Cardenas [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0001-7884-2353) at the [Machado lab](https://machado-lab.github.io/) and <br />
 :computer: [Universidade Federal de Santa Maria](https://www.ufsm.br/orgaos-de-apoio/sai/welcome-to-ufsm)
 
 ## :muscle: Sponsors
