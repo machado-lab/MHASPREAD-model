@@ -10,14 +10,14 @@ This is a multi-host, single-pathogen, coupled multiscale model designed to simu
 ## Model outputs 
 ### Susceptible-Exposed(Latent)-Infectious-Recovered dynamics within a farm
 Example of stochastic dynamics of a farm  with 100 animals 
-<br />
+<br/>
 <img width="500" alt="Screenshot 2024-06-20 at 1 45 52 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/bd556c86-8e72-43ca-94dd-1a437b9ef6d2">
-<br />
+<br/>
 #### Epidemic Curves of a Population Farms
 Infected farms over time, considering different host species. 
-<br />
+<br/>
 <img width="500"  alt="Screenshot 2024-06-20 at 1 52 08 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/ebceeec0-47f9-40f4-b883-f39249ae40ad">
-<br />
+<br/>
 #### Number of animals in each compartment considering a population farms 
 The number of infected animals for all host species(susceptible compartment was excluded from the plot to improve data visualization)
 <br/>
@@ -25,16 +25,12 @@ The number of infected animals for all host species(susceptible compartment was 
 <br/>
 #### Control actions 
 Evaluate the performance of the simulated control action 
+<br/>
 <img width="500" alt="Screenshot 2024-06-21 at 1 17 43 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/d6604953-5da3-4b64-be86-220d00645d0d">
-
+<br/>
 
 ## How to use 
-A complete example code is provided [here.](example_script.rm) 
-
-
-### Running the Code
-
-To run the code, execute each section sequentially in an R environment. Make sure to adjust the parameters and file paths as needed for your specific scenario.
+A complete example code is provided [here.](example_script.rm). To run the code, execute each section sequentially in an R environment. Make sure to adjust the parameters and file paths as needed for your specific simulation scenario.
 
 ## License
 
@@ -44,7 +40,7 @@ This model source is provided under the [Proprietari License](LICENSE.md).
 
 The disease spread simulation and control actions code are part of the MHASpread package developed by the Machado Lab. Special thanks to the contributors and developers of the package.
 
-Feel free to explore and adapt this code for your disease spread modeling and control research. If you have any questions or issues, please open an [issue](https://github.com/your/repository/issues) on this GitHub repository.
+Feel free to explore and adapt this code for your disease spread modeling and control research. If you have any questions or issues, please open an [issue](https://github.com/machado-lab/MHASPREAD-model/issues) on this GitHub repository.
 
 
 
