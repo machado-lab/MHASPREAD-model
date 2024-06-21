@@ -30,7 +30,7 @@ Evaluate the performance of the simulated control action
 <br/>
 
 ## How to use 
-A complete example code is provided [here.](example_script.rm). To run the code, execute each section sequentially in an R environment. Make sure to adjust the parameters and file paths as needed for your specific simulation scenario.
+A complete example code is provided [here.](example_script.md). To run the code, execute each section sequentially in an R environment. Make sure to adjust the parameters and file paths as needed for your specific simulation scenario.
 
 ## License
 This model source is provided under the [Proprietari License](LICENSE.md).
