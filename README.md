@@ -23,27 +23,13 @@ The number of infected animals for all host species(susceptible compartment was 
 <br/>
 <img width="500" alt="Screenshot 2024-06-20 at 1 57 20 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/e3abf095-b658-40ac-a6a8-d472443eb914">
 <br/>
+#### Control actions 
+Evaluate the performance of the simulated control action 
+<img width="500" alt="Screenshot 2024-06-21 at 1 17 43 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/d6604953-5da3-4b64-be86-220d00645d0d">
 
-```R
-# Plot infected farms curves considering all host species
-plot_infected_farms_curve(model_output = resultado, host = "All host")
-ggsave(last_plot(), file = "plot_infected_farms_curve_all.png", width = 10, height = 8)
 
-# Plot infected farms curves considering bovine species
-plot_infected_farms_curve(model_output = resultado, host = "Bovine")
-ggsave(last_plot(), file = "plot_infected_farms_curve_bov.png", width = 10, height = 8)
-
-# Plot infected farms curves considering swine species
-plot_infected_farms_curve(model_output = resultado, host = "Swine")
-ggsave(last_plot(), file = "plot_infected_farms_curve_swi.png", width = 10, height = 8)
-
-# Plot infected farms curves considering small ruminants species
-plot_infected_farms_curve(model_output = resultado, host = "Small ruminants")
-ggsave(last_plot(), file = "plot_infected_farms_curve_small.png", width = 10, height = 8)
-
-```
-
-#### 4. Initial Spread Epidemic Curves of Animals
+## How to use 
+An example code is provided here 
 
 Similar to the previous section, this section generates and saves plots of infected animals over time, considering different host species.
 
