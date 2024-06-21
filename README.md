@@ -2,7 +2,6 @@
 
 ![SEIR_model](https://img.shields.io/badge/SEIR_model-Up-green) ![Births_and_Deaths](https://img.shields.io/badge/Births_and_Deaths-Up-green) ![Spatial_Transmission](https://img.shields.io/badge/Spatial_Transmission-Up-green) ![Animal_Movements](https://img.shields.io/badge/Animal_Movements-Up-green) ![Disease_Control_Actions](https://img.shields.io/badge/Disease_Control_Actions-Up-green)   
 
-<a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/MHASpread_logo.png?raw=true" align="left" height="100" width="100"></a>
 
 # Model Description
 MHASpread is a multi-host, single-pathogen, coupled multiscale model designed to simulate epidemic trajectories of diseases. It incorporates various customizable control actions specific to different zones (such as infected, buffer, and surveillance zones), including depopulation, vaccination, and animal movement standstills, among other countermeasures. The model relies on two main sources of data: `population` and `events`. For a detailed description of the data format, please refer to [data_format.md](data_format.md).
