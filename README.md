@@ -31,9 +31,6 @@ Evaluate the performance of the simulated control actions:
 <img width="500" alt="Screenshot 2024-06-21 at 1 17 43 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/d6604953-5da3-4b64-be86-220d00645d0d">
 <br/>
 
-## How to Use
-A complete example code is provided [here](example_script.md). To run the code, execute each section sequentially in an R environment. Make sure to adjust the parameters and file paths as needed for your specific simulation scenario.
-
 ## License
 This model source is provided under the [Proprietary License](LICENSE.md).
 
