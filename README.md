@@ -4,7 +4,7 @@
 
 
 # Model Description
-MHASpread is a multi-host, single-pathogen, coupled multiscale model designed to simulate epidemic trajectories of diseases. It incorporates various customizable control actions specific to different zones (such as infected, buffer, and surveillance zones), including depopulation, vaccination, and animal movement standstills, among other countermeasures. The model relies on two main sources of data: `population` and `events`. For a detailed description of the data format, please refer to [data_format.md](data_format.md).
+MHASpread is a multi-host, single-pathogen, coupled multiscale model designed to simulate epidemic trajectories of diseases. It incorporates various customizable control actions specific to different zones (such as infected, buffer, and surveillance zones), including depopulation, vaccination, and animal movement standstills, among other countermeasures. The model relies on two main sources of data: `population` and `events`. For a detailed description of the data format, please refer to [data_format.md](data_format.md). An example code about how to run [is presented here.](example_script.md)
 
 ## Model Outputs
 ### Susceptible-Exposed (Latent)-Infectious-Recovered Dynamics Within a Farm
