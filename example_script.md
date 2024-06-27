@@ -5,7 +5,7 @@ Here, we describe the population and events data used for dissemination and cont
 
 ## Backgroud 
 
-The infection starts at the farm node with ID= `myfarm_code_id` with a population of `100` animals. 
+The infection starts at the farm node with ID= `123456` with a population of `100` animals. 
 Here, the disease was first detected `14` days after the initial disease introduction (infection started with `40` infected animals).
 ## Data Preparation
 
@@ -13,7 +13,7 @@ Here, the disease was first detected `14` days after the initial disease introdu
 
 ```r 
 population <- MHASpread::population # Get the population data example
-population$I_bov_pop[population$node== "myfarm_code_id"] <- 40 # Infected 40 bovine in farm with id = 'myfarm_code_id"
+population$I_bov_pop[population$node== "123456"] <- 40 # Infected 40 bovine in farm with id = '123456"
 ```
 2. Events data: between farm movements (in and/or out), birth or death
 ```r 
@@ -63,11 +63,7 @@ plot_SEIR_animals(model_output = model_output, # Model output
 Creates an interactive map about the farm that has been infected overall simulation, 
 in the background, the color bins represent the kernel density of the farm location weighted by the number of times in which the farm was infected. Thus, hots color highlights areas with farms that have been infected more times when compared with the others.
 
-<img width="500" alt="Screenshot 2024-06-25 at 10 35 18 AM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/e84a3485-dd9d-4e18-a899-808227f3d3eb">
 
-
-
-### Epidemic spatial distribution
 ```r 
 farms_location <-plot_nodes_kernel_map(model_output = model_output,
               population = population) # Save a map of farms that participated in this simulation
@@ -78,6 +74,8 @@ Is possible to take a snapshot of the map by using the next line
 ```r
 mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  # Save the map
 ```
+<img width="500" alt="Screenshot 2024-06-25 at 10 35 18 AM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/e84a3485-dd9d-4e18-a899-808227f3d3eb">
+
 ----
 # How the control action simulations work
 
@@ -211,10 +209,10 @@ plot_epi_curve_mean_and_cntrl_act(model_inital = result,
 
 ### Plot number of culled animals 
 ```r
-plot_depopulation_cost(control_output = control_model,
-                       level_plot = "farms",
-                       cost = 1000,
-                       cumulative = T)
+plot_depopulation(control_output = control_model,
+                 level_plot = "farms",
+                 cost = 1000,
+                 cumulative = T)
 ```
 
 <img width="500" alt="Screenshot 2024-06-25 at 11 30 50 AM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/43e60455-6435-423d-9b47-947812a678a4">
