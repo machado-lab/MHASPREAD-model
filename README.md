@@ -35,18 +35,14 @@ Evaluate the performance of the simulated control actions:
 This model source is provided under the [Proprietary License](LICENSE.md).
 
 ## Citation 
-The pre-print of this model is [available here](https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2024.1468864/full).
+The full model is [described here](https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2024.1468864/full).
 
 ## Acknowledgments
 This model is funded by FUNDESA RS.
 
-## Authors
-Nicolas Cardenas [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0001-7884-2353) <br />
-Gustavo Machado [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0001-7552-6144)
-
 ## Developers
 :computer: Nicolas Cardenas [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0001-7884-2353) at the [Machado Lab](https://machado-lab.github.io/) and <br />
-:computer: [Universidade Federal de Santa Maria](https://www.ufsm.br/orgaos-de-apoio/sai/welcome-to-ufsm)
+:computer: LUMAC team at [Universidade Federal de Santa Maria](https://www.ufsm.br/orgaos-de-apoio/sai/welcome-to-ufsm)
 
 ## :muscle: Sponsors
 <a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/fundesalogo.jpg?raw=true" align="left" width="200"></a>
