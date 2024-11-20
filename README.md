@@ -35,7 +35,7 @@ Evaluate the performance of the simulated control actions:
 This model source is provided under the [Proprietary License](LICENSE.md).
 
 ## Citation 
-The pre-print of this model is [available here](https://www.biorxiv.org/content/10.1101/2022.06.14.496159v3).
+The pre-print of this model is [available here](https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2024.1468864/full).
 
 ## Acknowledgments
 This model is funded by FUNDESA RS.
