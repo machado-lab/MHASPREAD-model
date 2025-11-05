@@ -34,17 +34,15 @@ Evaluate the performance of the simulated control actions:
 ## License
 This model source is provided under the [Proprietary License](LICENSE.md).
 
-## Citation 
-AUTHOR=Cardenas Nicolas C. , Lopes Francisco P. N. , Machado Alencar , Maran Vinicius , Trois Celio , Machado Felipe Amadori , Machado Gustavo 
-TITLE=Modeling foot-and-mouth disease dissemination in Rio Grande do Sul, Brazil and evaluating the effectiveness of control measures
-JOURNAL=Frontiers in Veterinary Science
-VOLUME=11
-YEAR=2024
-URL=https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2024.1468864
-DOI=10.3389/fvets.2024.1468864
-ISSN=2297-1769
+## 📚 References
+- 📚
+[Integrating epidemiological and economic models to estimate the cost of simulated foot-and-mouth disease outbreaks in Brazil](https://doi.org/10.1016/j.prevetmed.2025.106558)
+- 📚
+[Foot-and-Mouth Disease in Bolivia: Simulation-Based Assessment of Control Strategies and Vaccination Requirements](https://doi.org/10.1155/tbed/9055612)
+- 📚
+[Modeling foot-and-mouth disease dissemination in Brazil and evaluating the effectiveness of control measures](https://doi.org/10.3389/fvets.2024.1468864)
 
-Publisehd article is [available here](https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2024.1468864/full).
+
 
 ## Acknowledgments
 This model is funded by FUNDESA RS.
