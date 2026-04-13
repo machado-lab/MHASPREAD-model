@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-nav_order: 1
+nav_exclude: true
 description: "MHASpread: A Stochastic Multiscale Model for Animal Disease Spread and Control"
 permalink: /
 ---

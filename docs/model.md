@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Model
-nav_order: 2
-has_children: true
+nav_exclude: true
+has_children: false
 permalink: docs/model
 ---
 
