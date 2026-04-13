@@ -1,3 +1,7 @@
+[← Return to Documentation](../index.md)
+
+---
+
 # Introduction to MHASpread
 
 Welcome! This vignette introduces the core concepts and philosophy of MHASpread without requiring technical expertise.

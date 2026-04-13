@@ -1,3 +1,7 @@
+[← Return to Documentation](../index.md)
+
+---
+
 # Simulation Outputs: Interpreting Results
 
 This vignette explains how to understand, interpret, and visualize MHASpread simulation outputs—critical for evidence-based decision-making.

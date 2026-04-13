@@ -1,3 +1,7 @@
+[← Return to Documentation](index.md)
+
+---
+
 # Economic Impact Framework
 
 MHASpread integrates epidemiological simulation with economic modeling to assess the cost-effectiveness of disease control strategies.

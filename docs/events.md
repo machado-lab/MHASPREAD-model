@@ -1,3 +1,7 @@
+[← Return to Documentation](index.md)
+
+---
+
 # Events and Training
 
 MHASpread has been instrumental in international capacity-building and training initiatives aimed at strengthening disease surveillance and epidemiological modeling expertise among veterinary and public health authorities in Latin America and beyond.

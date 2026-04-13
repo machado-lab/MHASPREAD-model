@@ -1,3 +1,7 @@
+[← Return to Documentation](index.md)
+
+---
+
 # Model Overview
 
 This page provides a comprehensive technical description of the MHASpread model architecture, from compartmental structure through multiscale integration and stochastic processes.

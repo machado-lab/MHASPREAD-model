@@ -1,3 +1,7 @@
+[← Return to Documentation](../index.md)
+
+---
+
 # Model Structure: A Detailed Walkthrough
 
 This vignette provides a step-by-step technical explanation of how MHASpread is structured—ideal for researchers and modelers.

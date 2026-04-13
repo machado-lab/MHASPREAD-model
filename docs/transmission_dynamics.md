@@ -1,3 +1,7 @@
+[← Return to Documentation](index.md)
+
+---
+
 # Transmission Dynamics
 
 This page details the specific mechanisms by which foot-and-mouth disease spreads within and between farms in the MHASpread framework.

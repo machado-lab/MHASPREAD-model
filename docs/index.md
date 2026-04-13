@@ -1,29 +1,38 @@
-# MHASpread Documentation
+# MHASpread: Documentation Hub
 
-Welcome to the complete technical documentation for **MHASpread**, a stochastic multiscale transmission model for multi-host animal diseases.
+**MHASpread** is a stochastic multiscale transmission model for simulating foot-and-mouth disease (FMD) and other multi-host pathogens across livestock farming networks.
+
+---
+
+## 📚 Documentation Pages
+
+### **Technical Documentation**
+| Page | Description |
+|---|---|
+| **[Model Overview](model_overview.md)** | Comprehensive model structure, compartments, and mathematical foundations |
+| **[Transmission Dynamics](transmission_dynamics.md)** | Within-farm dynamics, spatial transmission kernel, and species-specific parameters |
+| **[Control Strategies](control_strategies.md)** | Depopulation, vaccination, movement restrictions, and contact tracing |
+| **[Economic Impact Framework](economic_impact.md)** | Integration of epidemiological and economic modeling |
+| **[Data Requirements](data_requirements.md)** | Input specifications, data preparation, and file formats |
+
+### **Learning Vignettes (Tutorials)**
+| Page | Description |
+|---|---|
+| **[Introduction](vignettes/introduction.md)** | Getting started with MHASpread concepts |
+| **[Model Structure](vignettes/model_structure.md)** | Detailed compartmental model walkthrough |
+| **[Transmission Processes](vignettes/transmission_processes.md)** | How infection spreads within and between farms |
+| **[Control Strategies](vignettes/control_strategies.md)** | Applying interventions effectively |
+| **[Simulation Outputs](vignettes/simulation_outputs.md)** | Interpreting model results |
+| **[Case Studies](vignettes/case_studies.md)** | Real-world applications and lessons learned |
+
+### **Community & Training**
+| Page | Description |
+|---|---|
+| **[Events and Training](events.md)** | International workshops, capacity-building initiatives, and resources |
+
+---
 
 ## Quick Navigation
-
-### Core Documentation
-
-- **[Model Overview](model_overview.md)** — Comprehensive model structure, compartments, and mathematical foundations
-- **[Transmission Dynamics](transmission_dynamics.md)** — Within-farm dynamics, spatial transmission kernel, and species-specific parameters
-- **[Control Strategies](control_strategies.md)** — Depopulation, vaccination, movement restrictions, and contact tracing
-- **[Economic Impact Framework](economic_impact.md)** — Integration of epidemiological and economic modeling
-- **[Data Requirements](data_requirements.md)** — Input specifications, data preparation, and file formats
-
-### Training and Outreach
-
-- **[Events and Training](events.md)** — International workshops, capacity-building initiatives, and resources
-
-### Conceptual Guides (Vignettes)
-
-- **[Introduction](vignettes/introduction.md)** — Getting started with MHASpread concepts
-- **[Model Structure](vignettes/model_structure.md)** — Detailed compartmental model walkthrough
-- **[Transmission Processes](vignettes/transmission_processes.md)** — How infection spreads within and between farms
-- **[Control Strategies](vignettes/control_strategies.md)** — Applying interventions effectively
-- **[Simulation Outputs](vignettes/simulation_outputs.md)** — Interpreting model results
-- **[Case Studies](vignettes/case_studies.md)** — Real-world applications and lessons learned
 
 ---
 

@@ -1,3 +1,7 @@
+[← Return to Documentation](../index.md)
+
+---
+
 # Case Studies: Real-World Applications
 
 This vignette presents real-world examples of MHASpread application, demonstrating how model outputs inform disease control policy.

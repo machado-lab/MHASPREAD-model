@@ -1,3 +1,7 @@
+[← Return to Documentation](../index.md)
+
+---
+
 # Transmission Processes: How FMD Spreads
 
 This vignette focuses on the mechanisms and dynamics of disease transmission—essential for understanding outbreak trajectory.

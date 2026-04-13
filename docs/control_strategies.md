@@ -1,3 +1,7 @@
+[← Return to Documentation](index.md)
+
+---
+
 # Control Strategies
 
 This page describes the disease control interventions implemented in MHASpread, their mechanisms, parameters, and interaction effects.

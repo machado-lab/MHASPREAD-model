@@ -1,3 +1,7 @@
+[← Return to Documentation](../index.md)
+
+---
+
 # Control Strategies: Making Intervention Decisions
 
 This vignette explains how different control strategies work in MHASpread, their trade-offs, and how to choose among them.
