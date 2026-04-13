@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Case Studies
-parent: Vignettes
+parent: Vignettes & Tutorials
 nav_order: 6
 ---
 

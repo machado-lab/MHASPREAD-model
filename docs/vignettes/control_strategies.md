@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Control Strategies Guide
-parent: Vignettes
+parent: Vignettes & Tutorials
 nav_order: 4
 ---
 

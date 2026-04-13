@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Economic Impact
-parent: Methods
-nav_order: 2
+title: Economic Impact Framework
+parent: Core Documentation
+nav_order: 4
 ---
 
 # Economic Impact Framework

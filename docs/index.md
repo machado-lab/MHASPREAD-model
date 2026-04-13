@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Documentation Hub
-nav_exclude: true
+title: Home
+nav_order: 1
 ---
 
 # MHASpread: Documentation Hub

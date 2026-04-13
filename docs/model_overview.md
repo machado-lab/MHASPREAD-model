@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Model Overview
-parent: Model
+parent: Core Documentation
 nav_order: 1
 ---
 

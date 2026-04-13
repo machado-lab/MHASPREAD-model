@@ -48,7 +48,6 @@ callouts:
 # ── Markdown / Math ───────────────────────────────────────────────────────────
 markdown: kramdown
 kramdown:
-  math_engine: mathjax
   syntax_highlighter: rouge
   input: GFM
 
@@ -57,3 +56,12 @@ highlighter: rouge
 # ── Plugins ───────────────────────────────────────────────────────────────────
 plugins:
   - jekyll-seo-tag
+  - jekyll-include-cache
+
+# ── MathJax (for formula rendering) ────────────────────────────────────────────
+mathjax:
+  version: 3
+  config:
+    tex:
+      inlineMath: [['$', '$']]
+      displayMath: [['$$', '$$']]

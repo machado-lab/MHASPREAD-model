@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Events & Training
-nav_order: 5
+nav_order: 4
 ---
 
 # Events and Training

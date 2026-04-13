@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Transmission Dynamics
-parent: Model
+parent: Core Documentation
 nav_order: 2
 ---
 

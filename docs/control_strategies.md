@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Control Strategies
-parent: Model
+parent: Core Documentation
 nav_order: 3
 ---
 

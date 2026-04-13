@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Data Requirements
-parent: Methods
-nav_order: 1
+parent: Core Documentation
+nav_order: 5
 ---
 
 # Data Requirements

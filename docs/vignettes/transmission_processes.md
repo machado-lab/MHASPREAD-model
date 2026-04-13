@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Transmission Processes
-parent: Vignettes
+parent: Vignettes & Tutorials
 nav_order: 3
 ---
 
