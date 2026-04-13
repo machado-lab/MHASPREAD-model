@@ -13,28 +13,25 @@ nav_order: 1
 ## 📚 Documentation Pages
 
 ### **Technical Documentation**
-| Page | Description |
-|---|---|
-| **[Model Overview](model_overview.md)** | Comprehensive model structure, compartments, and mathematical foundations |
-| **[Transmission Dynamics](transmission_dynamics.md)** | Within-farm dynamics, spatial transmission kernel, and species-specific parameters |
-| **[Control Strategies](control_strategies.md)** | Depopulation, vaccination, movement restrictions, and contact tracing |
-| **[Economic Impact Framework](economic_impact.md)** | Integration of epidemiological and economic modeling |
-| **[Data Requirements](data_requirements.md)** | Input specifications, data preparation, and file formats |
+
+- **[Model Overview](model_overview.md)** — Comprehensive model structure, compartments, and mathematical foundations
+- **[Transmission Dynamics](transmission_dynamics.md)** — Within-farm dynamics, spatial transmission kernel, and species-specific parameters
+- **[Control Strategies](control_strategies.md)** — Depopulation, vaccination, movement restrictions, and contact tracing
+- **[Economic Impact Framework](economic_impact.md)** — Integration of epidemiological and economic modeling
+- **[Data Requirements](data_requirements.md)** — Input specifications, data preparation, and file formats
 
 ### **Learning Vignettes (Tutorials)**
-| Page | Description |
-|---|---|
-| **[Introduction](vignettes/introduction.md)** | Getting started with MHASpread concepts |
-| **[Model Structure](vignettes/model_structure.md)** | Detailed compartmental model walkthrough |
-| **[Transmission Processes](vignettes/transmission_processes.md)** | How infection spreads within and between farms |
-| **[Control Strategies](vignettes/control_strategies.md)** | Applying interventions effectively |
-| **[Simulation Outputs](vignettes/simulation_outputs.md)** | Interpreting model results |
-| **[Case Studies](vignettes/case_studies.md)** | Real-world applications and lessons learned |
+
+- **[Introduction](vignettes/introduction.md)** — Getting started with MHASpread concepts
+- **[Model Structure](vignettes/model_structure.md)** — Detailed compartmental model walkthrough
+- **[Transmission Processes](vignettes/transmission_processes.md)** — How infection spreads within and between farms
+- **[Control Strategies](vignettes/control_strategies.md)** — Applying interventions effectively
+- **[Simulation Outputs](vignettes/simulation_outputs.md)** — Interpreting model results
+- **[Case Studies](vignettes/case_studies.md)** — Real-world applications and lessons learned
 
 ### **Community & Training**
-| Page | Description |
-|---|---|
-| **[Events and Training](events.md)** | International workshops, capacity-building initiatives, and resources |
+
+- **[Events and Training](events.md)** — International workshops, capacity-building initiatives, and resources
 
 ---
 
@@ -49,14 +46,12 @@ nav_order: 1
 | Concept | Description |
 |---|---|
 | **Compartmental Model** | SEIR framework adapted for multiple host species with vaccination and depopulation compartments |
-| **Multiscale Integration** | Coupled within-farm and between-farm transmission processes |
-| **Stochastic Simulation** | Explicit uncertainty in transmission, detection, and control efficacy |
-| **Spatial Kernel** | Exponential distance-decay function for local disease spread (max 40 km) |
-| **Species Specificity** | Differential β patterns reflecting biological differences (swine >> cattle > small ruminants) |
-| **Evidence-Based Parameters** | Transmission and disease duration parameters derived from peer-reviewed literature |
-
-### Multi-Host Dynamics
-
+- **Compartmental Model** — SEIR framework adapted for multiple host species with vaccination and depopulation compartments
+- **Multiscale Integration** — Coupled within-farm and between-farm transmission processes
+- **Stochastic Simulation** — Explicit uncertainty in transmission, detection, and control efficacy
+- **Spatial Kernel** — Exponential distance-decay function for local disease spread (max 40 km)
+- **Species Specificity** — Differential β patterns reflecting biological differences (swine >> cattle > small ruminants)
+- **Evidence-Based Parameters** — Transmission and disease duration parameters derived from peer-reviewed literature
 MHASpread explicitly models:
 
 - **Cattle (Bovine)**: Moderate transmitters; ~3–4 day infectious period
