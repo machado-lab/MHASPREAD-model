@@ -3,3 +3,9 @@ description: A Metapopulation Framework for Animal Disease Spread and Control
 theme: jekyll-theme-minimal
 github: [metadata]
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  math_engine_opts:
+    preview: true
+    preview_as_code: true
+  input: GFM
