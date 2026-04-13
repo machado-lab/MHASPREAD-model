@@ -1,57 +1,209 @@
-# MHASpread: A Multi-Host Animal Spread Stochastic Multilevel Model (version 3.0.0)
+# MHASpread: A Metapopulation Framework for Animal Disease Spread and Control
 
-![SEIR_model](https://img.shields.io/badge/SEIR_model-Up-green) ![Births_and_Deaths](https://img.shields.io/badge/Births_and_Deaths-Up-green) ![Spatial_Transmission](https://img.shields.io/badge/Spatial_Transmission-Up-green) ![Animal_Movements](https://img.shields.io/badge/Animal_Movements-Up-green) ![Disease_Control_Actions](https://img.shields.io/badge/Disease_Control_Actions-Up-green)   
+![SEIR_model](https://img.shields.io/badge/SEIR_model-multilevel-blue) ![Stochastic](https://img.shields.io/badge/Stochastic-enabled-brightgreen) ![Multi-species](https://img.shields.io/badge/Multi--host-3%20species-blue) ![Spatial_Transmission](https://img.shields.io/badge/Spatial_Transmission-kernel--based-orange) ![Control_Actions](https://img.shields.io/badge/Control_Actions-implemented-success)
 
+## Overview
 
-# Model Description
-MHASpread is a multi-host, single-pathogen, coupled multiscale model designed to simulate epidemic trajectories of diseases. It incorporates various customizable control actions specific to different zones (such as infected, buffer, and surveillance zones), including depopulation, vaccination, and animal movement standstills, among other countermeasures. The model relies on two main sources of data: `population` and `events`. For a detailed description of the data format, please refer to [data_format.md](data_format.md). An example of R Script about how to run [is presented here.](example_script.md)
+**MHASpread** is a comprehensive stochastic, multiscale transmission model designed to simulate epidemic trajectories of foot-and-mouth disease (FMD) and other multi-host pathogens across livestock farming networks. The framework integrates within-farm disease dynamics, spatial transmission processes, and realistic disease control interventions to enable rigorous evaluation of outbreak response strategies.
 
-## Model Outputs
-### Susceptible-Exposed (Latent)-Infectious-Recovered Dynamics Within a Farm
-Example of stochastic dynamics of a farm with 100 animals:
-<br/>
-<img width="500" alt="Screenshot 2024-06-20 at 1 45 52 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/bd556c86-8e72-43ca-94dd-1a437b9ef6d2">
-<br/>
+The model operates at two coupled scales:
 
-### Epidemic Curves of Population Farms
-Infected farms over time, considering different host species:
-<br/>
-<img width="500" alt="Screenshot 2024-06-20 at 1 52 08 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/ebceeec0-47f9-40f4-b883-f39249ae40ad">
-<br/>
+- **Within-farm scale**: Individual-based SEIR dynamics for multiple host species
+- **Metapopulation scale**: Network-level transmission via spatial kernels and animal movements
 
-### Number of Animals in Each Compartment Considering Population Farms
-Number of infected animals for all host species (the susceptible compartment is excluded to improve data visualization):
-<br/>
-<img width="500" alt="Screenshot 2024-06-20 at 1 57 20 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/e3abf095-b658-40ac-a6a8-d472443eb914">
-<br/>
+MHASpread is particularly suited for:
 
-### Control Actions 
-Evaluate the performance of the simulated control actions:
-<br/>
-<img width="500" alt="Screenshot 2024-06-21 at 1 17 43 PM" src="https://github.com/machado-lab/MHASPREAD-model/assets/41584216/d6604953-5da3-4b64-be86-220d00645d0d">
-<br/>
+- **Epidemiological research**: Understanding multi-host disease dynamics and species-specific transmission
+- **Policy evaluation**: Assessing the effectiveness and cost-efficiency of control strategies
+- **Emergency preparedness**: Simulating outbreak scenarios and informing contingency planning
+- **International capacity building**: Supporting training and knowledge transfer in disease surveillance and control
+
+## Scientific Background
+
+Foot-and-mouth disease (FMD) is a highly contagious viral disease of cloven-hoofed livestock with significant economic and trade implications. FMD demonstrates complex transmission dynamics due to:
+
+- **Multi-host nature**: Differential susceptibility and transmissibility across cattle, swine, and small ruminants
+- **Environmental persistence**: Heterogeneous transmission via direct contact, aerosol, and fomites
+- **Spatial heterogeneity**: Disease spread constrained by distance but facilitated by animal movements
+- **Species-specific traits**: Varying latent periods, infectious periods, and recovery rates
+
+MHASpread explicitly models these complexities to provide mechanistic insights into outbreak progression under diverse epidemiological and management scenarios.
+
+---
+
+## Model Description
+
+MHASpread is built on a stochastic, SEIR-based framework with distinct compartments for each host species:
+
+| Compartment | Definition |
+|---|---|
+| **S** | Susceptible: animals not infected and able to acquire infection |
+| **E** | Exposed: infected but not yet infectious (latent period) |
+| **I** | Infectious: infected animals capable of transmitting infection |
+| **R** | Recovered: animals recovered with temporary or permanent immunity |
+| **V** | Vaccinated: animals with vaccine-induced immunity |
+
+### Within-Farm Dynamics
+
+Disease progression within farms follows species-specific transmission probabilities (β) and disease duration parameters:
+
+- **Transmission coefficient (β)**: Determined by both infected and susceptible species, reflecting differential transmissibility (e.g., swine are more efficient FMD spreaders than cattle)
+- **Latent period (σ)**: Average 2–5 days, species-dependent
+- **Infectious period (γ)**: Average 3–6 days, species-dependent
+- **Vital dynamics**: Births and deaths incorporated where data available
+
+### Spatial Transmission
+
+Local spread between farms is modeled using an exponential transmission kernel:
+
+$$P_E(t) = 1 - \prod_i \left(1 - \frac{I_i(t)}{N_i} \phi e^{-\alpha d_{ij}}\right)$$
+
+where:
+- $d_{ij}$ = distance between farms (maximum 40 km)
+- $\phi$ = baseline transmission probability (0.044)
+- $\alpha$ = kernel decay parameter (0.6)
+- $I_i(t)/N_i$ = infection prevalence at farm $i$
+
+This formulation captures the empirically observed pattern of decreasing transmission risk with distance, bounded by documented maximum dispersal distances.
+
+### Disease Detection
+
+Infected farms are detected through active surveillance using a hypergeometric sampling process that:
+
+1. Inspects a fraction of farms under surveillance (≥1 farm)
+2. Identifies infected farms accounting for finite surveillance population
+3. Incorporates diagnostic imperfection (sensitivity $s$)
+4. Tracks traceback-identified farms through contact tracing
+
+### Control Interventions
+
+MHASpread implements four primary control strategies:
+
+| Control | Description | Implementation |
+|---|---|---|
+| **Depopulation** | Culling of infected farms | Priority by herd size; daily capacity limits |
+| **Emergency Vaccination** | Ring vaccination of bovine herds | Infected + buffer zones; 15-day lag; daily capacity limits |
+| **Movement Standstill** | Restriction on animal movements | 30-day duration across infected, buffer, and surveillance zones |
+| **Contact Tracing** | Identification of linked farms | 30-day traceback window; farms under enhanced surveillance |
+
+### Control Zones
+
+Three nested zones enforce differential surveillance and intervention intensity:
+
+- **Infected zone** (3 km): Focus of depopulation and immediate control
+- **Buffer zone** (7 km): Secondary vaccination prioritization
+- **Surveillance zone** (15 km): Active detection and monitoring
+
+---
+
+## Key Features
+
+✓ **Multi-host dynamics**: Explicit modeling of cattle, swine, and small ruminants  
+✓ **Species-specific transmission**: Parameterized from empirical literature  
+✓ **Stochastic processes**: Incorporates uncertainty in transmission, detection, and control efficacy  
+✓ **Spatial heterogeneity**: Distance-dependent transmission and realistic farm networks  
+✓ **Flexible control actions**: Customizable intervention timing, capacity, and extent  
+✓ **Diagnostic imperfection**: Reflects real-world detection limitations  
+✓ **Vital dynamics**: Optional incorporation of births and deaths  
+✓ **Scenario analysis**: Supports evaluation of multiple strategies  
+
+---
+
+## Applications
+
+MHASpread has been applied to:
+
+- **FMD preparedness in South America**: Evaluating control strategies for Brazil (2024) and Bolivia (2023)
+- **Cost-effectiveness analysis**: Integrating epidemiological and economic models to inform policy
+- **Surveillance optimization**: Assessing detection capacity and traceback effectiveness
+- **International training**: Building epidemiological modeling expertise in partner countries
+
+---
+
+## Events and Training
+
+The MHASpread framework has been instrumental in international workshops and capacity-building initiatives aimed at strengthening disease surveillance and control expertise among veterinary and public health authorities in Latin America.
+
+### Chile FMD Workshop 2024
+[workshop_aftosa_chile_2024](https://machado-lab.github.io/workshop_aftosa_chile_2024/)  
+*Training program for Chilean national authorities on FMD simulation modeling, risk-based surveillance design, and emergency response preparedness. Participants gained hands-on experience with MHASpread to evaluate control strategies tailored to Chilean agricultural contexts.*
+
+### PANAFTOSA Workshop Rio 2023
+[PANAFTOSA-Workshop-Rio2023](https://machado-lab.github.io/PANAFTOSA-Workshop-Rio2023/)  
+*Regional capacity-building initiative hosted by PAHO's Pan American Animal Health Organization, bringing together epidemiologists and veterinary officials from across the Americas. Focus on metapopulation modeling, uncertainty quantification, and evidence-based contingency planning for transboundary animal diseases.*
+
+### PAHO MHASpread Workshop Repository
+[MHASpread_workshop_PAHO](https://github.com/machado-lab/MHASpread_workshop_PAHO/)  
+*Comprehensive open-access workshop materials including tutorials, datasets, and worked examples. Provides reproducible workflows for disease simulation, sensitivity analysis, and policy evaluation using MHASpread-based methodologies.*
+
+---
+
+## Relationship to Published Work
+
+MHASpread development and application are documented in peer-reviewed publications:
+
+- **Cespedes Cardenas & Machado (2024)**: [Modeling foot-and-mouth disease dissemination in Brazil and evaluating the effectiveness of control measures](https://doi.org/10.3389/fvets.2024.1468864) — *Frontiers in Veterinary Science*
+
+- **Cardenas et al. (2024)**: [Integrating epidemiological and economic models to estimate the cost of simulated foot-and-mouth disease outbreaks in Brazil](https://doi.org/10.1016/j.prevetmed.2025.106558) — *Preventive Veterinary Medicine*
+
+- **Cespedes & Castillo (2023)**: [Foot-and-mouth disease in Bolivia: Simulation-based assessment of control strategies and vaccination requirements](https://doi.org/10.1155/tbed/9055612) — *Transboundary and Emerging Diseases*
+
+---
+
+## Limitations
+
+- **Spatial scope**: Model designed for farm-level networks; may require adaptation for larger-scale systems
+- **Data requirements**: Accurate population sizes, movement records, and species composition needed
+- **Parameter uncertainty**: FMD transmission parameters derived from limited field studies; sensitivity analysis recommended
+- **Control realism**: Model assumes adherence to protocol; deviations may affect outcomes
+- **Single-pathogen focus**: Not designed for multi-pathogen coinfection scenarios
+
+---
+
+## Citation
+
+If you use MHASpread in your research, please cite:
+
+> Cespedes Cardenas, N., & Machado, G. (2024). Modeling foot-and-mouth disease dissemination in Brazil and evaluating the effectiveness of control measures. *Frontiers in Veterinary Science*, 11, 1468864. https://doi.org/10.3389/fvets.2024.1468864
+
+---
 
 ## License
-This model source is provided under the [Proprietary License](LICENSE.md).
 
-## 📚 References
-- 📚
-[Integrating epidemiological and economic models to estimate the cost of simulated foot-and-mouth disease outbreaks in Brazil](https://doi.org/10.1016/j.prevetmed.2025.106558)
-- 📚
-[Foot-and-Mouth Disease in Bolivia: Simulation-Based Assessment of Control Strategies and Vaccination Requirements](https://doi.org/10.1155/tbed/9055612)
-- 📚
-[Modeling foot-and-mouth disease dissemination in Brazil and evaluating the effectiveness of control measures](https://doi.org/10.3389/fvets.2024.1468864)
+This repository contains documentation and educational materials for MHASpread. The proprietary model source code is provided under a separate commercial or institutional license agreement. See [LICENSE.md](MHASPREAD-model/LICENSE.md) for details.
 
-
+---
 
 ## Acknowledgments
-This model is funded by FUNDESA RS.
+
+MHASpread development is supported by:
+
+- **FUNDESA RS** (Fundação de Desenvolvimento para Excelência em Ciência e Tecnologia do Rio Grande do Sul)
+- **NC State University** - Department of Population Health and Pathobiology
+- **LUMAC** (Laboratório de Unidades Multidisciplinares de Apoio Científico) — Universidade Federal de Santa Maria
+
+---
 
 ## Developers
-:computer: Nicolas Cardenas [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0001-7884-2353) at the [Machado Lab](https://machado-lab.github.io/) and <br />
-:computer: LUMAC team at [Universidade Federal de Santa Maria](https://www.ufsm.br/orgaos-de-apoio/sai/welcome-to-ufsm)
 
-## :muscle: Sponsors
-<a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/fundesalogo.jpg?raw=true" align="left" width="200"></a>
-<a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/ncstate-type-4x1-red-min.png?raw=true" align="left" width="200"></a>
-<a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/seapilogo.png?raw=true" align="left" width="300"></a>
+🖥️ **Nicolas Cespedes Cardenas** [![ORCID](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0001-7884-2353)  
+*Machado Lab, College of Veterinary Medicine*  
+*NC State University*
+
+🖥️ **LUMAC Team**  
+*Universidade Federal de Santa Maria, Brazil*
+
+---
+
+## Documentation
+
+For detailed technical documentation, visit our [comprehensive documentation site](https://machado-lab.github.io/MHASPREAD-docs/) or explore the sections below:
+
+- **[Model Overview](docs/model_overview.md)** — Detailed model structure and compartments
+- **[Transmission Dynamics](docs/transmission_dynamics.md)** — Within-farm and spatial transmission mechanisms
+- **[Control Strategies](docs/control_strategies.md)** — Detailed description of interventions
+- **[Economic Impact](docs/economic_impact.md)** — Cost-effectiveness integration
+- **[Data Requirements](docs/data_requirements.md)** — Input data specifications and preparation
+- **[Events & Training](docs/events.md)** — International workshops and capacity-building
+- **[Vignettes](vignettes/)** — Conceptual tutorials and use cases
+
