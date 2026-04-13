@@ -16,14 +16,14 @@ Welcome to the complete technical documentation for **MHASpread**, a stochastic 
 
 - **[Events and Training](events.md)** — International workshops, capacity-building initiatives, and resources
 
-### Conceptual Guides
+### Conceptual Guides (Vignettes)
 
-- **[Introduction](../vignettes/introduction.md)** — Getting started with MHASpread concepts
-- **[Model Structure](../vignettes/model_structure.md)** — Detailed compartmental model walkthrough
-- **[Transmission Processes](../vignettes/transmission_processes.md)** — How infection spreads within and between farms
-- **[Control Strategies](../vignettes/control_strategies.md)** — Applying interventions effectively
-- **[Simulation Outputs](../vignettes/simulation_outputs.md)** — Interpreting model results
-- **[Case Studies](../vignettes/case_studies.md)** — Real-world applications and lessons learned
+- **[Introduction](vignettes/introduction.md)** — Getting started with MHASpread concepts
+- **[Model Structure](vignettes/model_structure.md)** — Detailed compartmental model walkthrough
+- **[Transmission Processes](vignettes/transmission_processes.md)** — How infection spreads within and between farms
+- **[Control Strategies](vignettes/control_strategies.md)** — Applying interventions effectively
+- **[Simulation Outputs](vignettes/simulation_outputs.md)** — Interpreting model results
+- **[Case Studies](vignettes/case_studies.md)** — Real-world applications and lessons learned
 
 ---
 
