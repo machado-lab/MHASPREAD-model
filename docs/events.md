@@ -1,5 +1,7 @@
-[← Return to Documentation](index.md)
-
+---
+layout: default
+title: Events & Training
+nav_order: 5
 ---
 
 # Events and Training

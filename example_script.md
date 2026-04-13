@@ -1,3 +1,6 @@
+---
+nav_exclude: true
+---
 
 # Example code of an initial spread simulation and control action 
 

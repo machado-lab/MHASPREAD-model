@@ -1,5 +1,8 @@
-[← Return to Documentation](index.md)
-
+---
+layout: default
+title: Data Requirements
+parent: Methods
+nav_order: 1
 ---
 
 # Data Requirements

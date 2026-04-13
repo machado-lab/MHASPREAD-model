@@ -1,0 +1,174 @@
+// ============================================================
+// MHASpread — Academic documentation theme overrides
+// Loaded last by just-the-docs; overrides default variables.
+// ============================================================
+
+// ── Typography ─────────────────────────────────────────────
+body {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #1a1a2e;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 700;
+  border-bottom: 2px solid #0f6be7;
+  padding-bottom: 0.3em;
+  margin-bottom: 1.2em;
+  color: #0d1b4b;
+}
+
+h2 {
+  font-size: 1.45em;
+  font-weight: 600;
+  border-bottom: 1px solid #dde3ea;
+  padding-bottom: 0.2em;
+  margin-top: 2.2em;
+  color: #0d1b4b;
+}
+
+h3 {
+  font-size: 1.15em;
+  font-weight: 600;
+  margin-top: 1.6em;
+  color: #1c2b5e;
+}
+
+// ── Equations ──────────────────────────────────────────────
+// Displayed math blocks — subtle highlight box
+mjx-container[display="true"],
+.MJXc-display {
+  overflow-x: auto;
+  padding: 0.9em 1.2em;
+  margin: 1.5em 0;
+  background: #f5f7fb;
+  border-left: 4px solid #0f6be7;
+  border-radius: 0 5px 5px 0;
+}
+
+// Prevent inline math from wrapping oddly
+mjx-container:not([display="true"]) {
+  display: inline;
+}
+
+// ── Tables ─────────────────────────────────────────────────
+table {
+  font-size: 0.9em;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5em 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+
+  thead tr {
+    background-color: #0f6be7;
+    color: #fff;
+  }
+
+  th {
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  td {
+    padding: 8px 14px;
+    border-bottom: 1px solid #e8edf3;
+    vertical-align: top;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f8f9fc;
+  }
+
+  tbody tr:hover {
+    background-color: #eef3ff;
+  }
+}
+
+// ── Code blocks ────────────────────────────────────────────
+pre.highlight, div.highlighter-rouge pre {
+  border-radius: 5px;
+  border: 1px solid #dde3ea;
+  font-size: 0.87em;
+}
+
+// ── Horizontal rules ───────────────────────────────────────
+hr {
+  border: none;
+  border-top: 1px solid #dde3ea;
+  margin: 2em 0;
+}
+
+// ── Blockquotes (used for citations / callouts) ────────────
+blockquote {
+  border-left: 4px solid #0f6be7;
+  background: #f5f7fb;
+  margin: 1.5em 0;
+  padding: 0.8em 1.2em;
+  border-radius: 0 5px 5px 0;
+  font-style: normal;
+  color: #333;
+
+  p { margin: 0; }
+}
+
+// ── Navigation sidebar ─────────────────────────────────────
+.nav-list .nav-list-item .nav-list-link {
+  font-size: 0.88em;
+}
+
+// ── Site header branding ───────────────────────────────────
+.site-title {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+// ── Back-to-top ────────────────────────────────────────────
+.back-to-top {
+  font-size: 0.8em;
+}
+
+// ── Publication card (used in publications.md) ─────────────
+// Applied via raw HTML <div class="pub-card"> in Markdown
+.pub-card {
+  border-left: 4px solid #0f6be7;
+  background: #f9fafc;
+  padding: 1em 1.3em;
+  margin: 1.4em 0;
+  border-radius: 0 5px 5px 0;
+
+  .pub-authors { font-weight: 600; color: #0d1b4b; }
+  .pub-title   { font-style: italic; }
+  .pub-journal { color: #444; }
+  .pub-doi     { font-size: 0.85em; color: #0f6be7; }
+}
+
+// ── Hero box on home page ──────────────────────────────────
+.hero-box {
+  background: linear-gradient(135deg, #0d1b4b 0%, #1c4dc7 100%);
+  color: #fff;
+  padding: 2.5em 2em;
+  border-radius: 8px;
+  margin-bottom: 2em;
+
+  h1 { border: none; color: #fff; }
+  p  { color: #cdd9f5; }
+}
+
+// ── Feature grid (used on home page) ──────────────────────
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1em;
+  margin: 1.5em 0;
+
+  .feature-cell {
+    border: 1px solid #dde3ea;
+    border-radius: 6px;
+    padding: 1em;
+    background: #fafbff;
+
+    strong { color: #0d1b4b; display: block; margin-bottom: 0.3em; }
+  }
+}

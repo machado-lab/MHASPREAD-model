@@ -1,5 +1,8 @@
-[← Return to Documentation](../index.md)
-
+---
+layout: default
+title: Introduction
+parent: Vignettes
+nav_order: 1
 ---
 
 # Introduction to MHASpread

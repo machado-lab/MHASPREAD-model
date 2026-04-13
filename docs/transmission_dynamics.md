@@ -1,5 +1,8 @@
-[← Return to Documentation](index.md)
-
+---
+layout: default
+title: Transmission Dynamics
+parent: Model
+nav_order: 2
 ---
 
 # Transmission Dynamics

@@ -1,5 +1,8 @@
-[← Return to Documentation](index.md)
-
+---
+layout: default
+title: Control Strategies
+parent: Model
+nav_order: 3
 ---
 
 # Control Strategies

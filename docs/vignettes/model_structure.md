@@ -1,5 +1,8 @@
-[← Return to Documentation](../index.md)
-
+---
+layout: default
+title: Model Structure
+parent: Vignettes
+nav_order: 2
 ---
 
 # Model Structure: A Detailed Walkthrough

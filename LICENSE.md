@@ -1,3 +1,7 @@
+---
+nav_exclude: true
+---
+
 Proprietary License
 
 Copyright 2024 Copyright (c) 2023 The Machado Lab at NCSU. All rights reserved.

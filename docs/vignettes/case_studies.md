@@ -1,5 +1,8 @@
-[← Return to Documentation](../index.md)
-
+---
+layout: default
+title: Case Studies
+parent: Vignettes
+nav_order: 6
 ---
 
 # Case Studies: Real-World Applications

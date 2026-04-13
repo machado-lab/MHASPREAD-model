@@ -1,5 +1,8 @@
-[← Return to Documentation](../index.md)
-
+---
+layout: default
+title: Simulation Outputs
+parent: Vignettes
+nav_order: 5
 ---
 
 # Simulation Outputs: Interpreting Results

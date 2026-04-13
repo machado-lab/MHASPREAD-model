@@ -1,5 +1,8 @@
-[← Return to Documentation](index.md)
-
+---
+layout: default
+title: Economic Impact
+parent: Methods
+nav_order: 2
 ---
 
 # Economic Impact Framework

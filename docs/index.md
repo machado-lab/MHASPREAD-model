@@ -1,3 +1,9 @@
+---
+layout: default
+title: Documentation Hub
+nav_exclude: true
+---
+
 # MHASpread: Documentation Hub
 
 **MHASpread** is a stochastic multiscale transmission model for simulating foot-and-mouth disease (FMD) and other multi-host pathogens across livestock farming networks.

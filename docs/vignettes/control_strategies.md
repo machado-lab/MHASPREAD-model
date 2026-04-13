@@ -1,5 +1,8 @@
-[← Return to Documentation](../index.md)
-
+---
+layout: default
+title: Control Strategies Guide
+parent: Vignettes
+nav_order: 4
 ---
 
 # Control Strategies: Making Intervention Decisions

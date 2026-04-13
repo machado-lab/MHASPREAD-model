@@ -1,5 +1,8 @@
-[← Return to Documentation](../index.md)
-
+---
+layout: default
+title: Transmission Processes
+parent: Vignettes
+nav_order: 3
 ---
 
 # Transmission Processes: How FMD Spreads
