@@ -1,0 +1,7 @@
+source "https://rubygems.org"
+gem "jekyll", "~> 3.9"
+gem "kramdown-parser-gfm"
+gem "just-the-docs"
+gem "jekyll-remote-theme"
+gem "jekyll-seo-tag"
+gem "jekyll-include-cache"
