@@ -142,11 +142,15 @@ The MHASpread framework has been instrumental in international workshops and cap
 
 MHASpread development and application are documented in peer-reviewed publications:
 
-- **Cespedes Cardenas & Machado (2024)**: [Modeling foot-and-mouth disease dissemination in Brazil and evaluating the effectiveness of control measures](https://doi.org/10.3389/fvets.2024.1468864) — *Frontiers in Veterinary Science*
+- **Cardenas, N. C., Lopes, F. P. N., Machado, A., Maran, V., Trois, C., Machado, F. A., & Machado, G. (2024)**: [Modeling foot-and-mouth disease dissemination in Rio Grande do Sul, Brazil and evaluating the effectiveness of control measures](https://doi.org/10.3389/fvets.2024.1468864) — *Frontiers in Veterinary Science*
 
-- **Cardenas et al. (2024)**: [Integrating epidemiological and economic models to estimate the cost of simulated foot-and-mouth disease outbreaks in Brazil](https://doi.org/10.1016/j.prevetmed.2025.106558) — *Preventive Veterinary Medicine*
+- **Cardenas, N. C., et al. (2025)**: [Integrating epidemiological and economic models to estimate the cost of simulated foot-and-mouth disease outbreaks in Brazil](https://doi.org/10.1016/j.prevetmed.2025.106558) — *Preventive Veterinary Medicine*
 
-- **Cespedes & Castillo (2023)**: [Foot-and-mouth disease in Bolivia: Simulation-based assessment of control strategies and vaccination requirements](https://doi.org/10.1155/tbed/9055612) — *Transboundary and Emerging Diseases*
+- **Cardenas, N. C., et al. (2025)**: [Foot-and-mouth disease in Bolivia: Simulation-based assessment of control strategies and vaccination requirements](https://doi.org/10.1155/tbed/9055612) — *Transboundary and Emerging Diseases*
+
+- **Ebling, D. S., et al. (2024)**: [A Distributed Processing Architecture for Disease Spread Analysis in the PDSA-RS Platform](https://doi.org/10.5220/0012742700003690) — *ICEIS 2024 Proceedings*
+
+- **Preventive Veterinary Medicine (2026)**: [doi:10.1016/j.prevetmed.2026.106848](https://doi.org/10.1016/j.prevetmed.2026.106848) — metadata pending
 
 ---
 
@@ -164,7 +168,7 @@ MHASpread development and application are documented in peer-reviewed publicatio
 
 If you use MHASpread in your research, please cite:
 
-> Cespedes Cardenas, N., & Machado, G. (2024). Modeling foot-and-mouth disease dissemination in Brazil and evaluating the effectiveness of control measures. *Frontiers in Veterinary Science*, 11, 1468864. https://doi.org/10.3389/fvets.2024.1468864
+> Cardenas, N. C., Lopes, F. P. N., Machado, A., Maran, V., Trois, C., Machado, F. A., & Machado, G. (2024). Modeling foot-and-mouth disease dissemination in Rio Grande do Sul, Brazil and evaluating the effectiveness of control measures. *Frontiers in Veterinary Science*, 11, 1468864. https://doi.org/10.3389/fvets.2024.1468864
 
 ---
 
@@ -206,4 +210,3 @@ For detailed technical documentation, visit our [comprehensive documentation sit
 - **[Data Requirements](docs/data_requirements.md)** — Input data specifications and preparation
 - **[Events & Training](docs/events.md)** — International workshops and capacity-building
 - **[Vignettes](vignettes/)** — Conceptual tutorials and use cases
-

@@ -6,30 +6,41 @@ description: "MHASpread: A Stochastic Multiscale Model for Animal Disease Spread
 permalink: /
 ---
 
-# MHASpread
-{: .fw-700 }
+<div class="hero-box">
+  <h1>MHASpread</h1>
+  <p class="fs-5">A Stochastic Multiscale Model for Animal Disease Spread and Control</p>
+  <p>
+    MHASpread is an R-based simulation framework for modeling foot-and-mouth disease (FMD) and other
+    multi-host pathogens across real-world livestock networks. It couples within-farm SEIR dynamics
+    with spatial transmission kernels and animal-movement networks to evaluate outbreak responses
+    under realistic uncertainty.
+  </p>
+  <a href="docs/model" class="btn btn-primary fs-5 mb-2 mr-2">Explore the Model</a>
+  <a href="docs/publications" class="btn fs-5 mb-2">View Publications</a>
+</div>
 
-**A Stochastic Multiscale Model for Animal Disease Spread and Control**
-{: .fs-5 .text-grey-dk-000 }
+## Why MHASpread
 
-MHASpread is an R-based simulation framework for modeling foot-and-mouth disease (FMD) — and other multi-host pathogens — across real-world livestock farming networks. Combining within-farm SEIR dynamics with spatial transmission kernels and animal-movement networks, it enables rigorous evaluation of outbreak response strategies under realistic uncertainty.
+Foot-and-mouth disease outbreaks are economically devastating, politically sensitive, and
+epidemiologically complex. Effective control requires understanding how the disease moves through
+heterogeneous farm networks and how interventions ripple over time.
 
-{: .mb-4 }
-<a href="docs/model" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2">Explore the Model</a>
-<a href="docs/publications" class="btn fs-5 mb-4 mb-md-0">View Publications</a>
+MHASpread helps answer questions that deterministic or single-species models cannot:
+
+- How does a single infected shipment cascade into regional outbreaks?
+- What is the marginal benefit of faster depopulation versus wider vaccination rings?
+- How does outbreak size vary across hundreds of stochastic replicates under identical conditions?
+- What is the cost-effectiveness of each control strategy under parameter uncertainty?
 
 ---
 
-## Why MHASpread?
+## Key Capabilities
 
-Foot-and-mouth disease outbreaks are economically devastating, politically sensitive, and epidemiologically complex. Effective control requires understanding how the disease moves through diverse host species and heterogeneous farm networks — and how interventions ripple across those networks over time.
-
-MHASpread was designed to answer questions that deterministic or single-species models cannot:
-
-- How does a single infected swine shipment cascade into a regional outbreak?
-- What is the marginal benefit of faster depopulation versus wider vaccination rings?
-- How does outbreak size vary across 1,000 stochastic replicates under identical initial conditions?
-- What is the cost-effectiveness of each control strategy under parameter uncertainty?
+- Multiscale disease dynamics with within-farm SEIR and between-farm spatial transmission.
+- Multi-host modeling for cattle, swine, and small ruminants with species-specific parameters.
+- Integrated control actions including depopulation, ring vaccination, movement standstill, and tracing.
+- Stochastic simulation with uncertainty in transmission, detection, and control effectiveness.
+- Economic integration for direct and indirect cost assessment.
 
 ---
 
@@ -42,29 +53,16 @@ MHASpread was designed to answer questions that deterministic or single-species 
 | **Transmission** | Mass-action within farm; exponential kernel between farms; animal movement network |
 | **Control actions** | Depopulation, ring vaccination, movement standstill, contact tracing |
 | **Stochasticity** | Binomial transmission sampling; PERT-distributed parameters; hypergeometric detection |
-| **Economic layer** | Direct costs (depopulation, vaccination) + indirect costs (market disruption) |
+| **Economic layer** | Direct costs + indirect costs (market disruption) |
 | **Outputs** | Epidemic curves, farm-level attack maps, cost-effectiveness ratios |
 
 ---
 
-## Core Transmission Kernel
+## Selected Publications
 
-Between-farm transmission is governed by an exponential spatial decay:
-
-$$P_{E_j}(t) = 1 - \prod_{i \in \mathcal{I}(t)} \left(1 - \frac{I_i(t)}{N_i}\, \phi\, e^{-\alpha\, d_{ij}}\right)$$
-
-where $\phi = 0.044$ is the baseline transmission probability, $\alpha = 0.6 \text{ km}^{-1}$ is the decay rate, and $d_{ij}$ is the Euclidean distance between farms $i$ and $j$.
-
----
-
-## Documented Applications
-
-| Study | Region | Focus | Reference |
-|---|---|---|---|
-| FMD control strategies | Brazil (Rio Grande do Sul) | Depopulation vs. vaccination trade-offs | Cespedes Cardenas & Machado (2024) |
-| Epidemiological–economic integration | Brazil | Cost-effectiveness of control portfolios | Cardenas et al. (2025) |
-| Strategic preparedness | Bolivia | Simulation-based vaccination requirements | Cespedes & Castillo (2023) |
-| Capacity building | Chile, PAHO region | Hands-on training for national authorities | Workshops 2023–2024 |
+- Cardenas, N. C., Lopes, F. P. N., Machado, A., Maran, V., Trois, C., Machado, F. A., & Machado, G. (2024). Modeling foot-and-mouth disease dissemination in Rio Grande do Sul, Brazil and evaluating the effectiveness of control measures. *Frontiers in Veterinary Science*. [https://doi.org/10.3389/fvets.2024.1468864](https://doi.org/10.3389/fvets.2024.1468864)
+- Cardenas, N. C., et al. (2025). Integrating epidemiological and economic models to estimate the cost of simulated foot-and-mouth disease outbreaks in Brazil. *Preventive Veterinary Medicine*. [https://doi.org/10.1016/j.prevetmed.2025.106558](https://doi.org/10.1016/j.prevetmed.2025.106558)
+- Cardenas, N. C., et al. (2025). Foot-and-mouth disease in Bolivia: Simulation-based assessment of control strategies and vaccination requirements. *Transboundary and Emerging Diseases*. [https://doi.org/10.1155/tbed/9055612](https://doi.org/10.1155/tbed/9055612)
 
 ---
 
@@ -99,7 +97,7 @@ where $\phi = 0.044$ is the baseline transmission probability, $\alpha = 0.6 \te
 
 If you use MHASpread in your research, please cite:
 
-> Cespedes Cardenas, N., & Machado, G. (2024). Modeling foot-and-mouth disease dissemination in Brazil and evaluating the effectiveness of control measures. *Frontiers in Veterinary Science*, 11, 1468864. [https://doi.org/10.3389/fvets.2024.1468864](https://doi.org/10.3389/fvets.2024.1468864)
+> Cardenas, N. C., Lopes, F. P. N., Machado, A., Maran, V., Trois, C., Machado, F. A., & Machado, G. (2024). Modeling foot-and-mouth disease dissemination in Rio Grande do Sul, Brazil and evaluating the effectiveness of control measures. *Frontiers in Veterinary Science*, 11, 1468864. https://doi.org/10.3389/fvets.2024.1468864
 
 ---
 
