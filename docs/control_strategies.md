@@ -11,7 +11,7 @@ This page describes the disease control interventions implemented in MHASpread, 
 
 ---
 
-## Overview of Control Actions
+## Overview of Control Actions 
 
 MHASpread implements four complementary control strategies applied across three nested spatial zones. Control actions are triggered upon detection of infected farms and operate simultaneously to contain and eliminate infection.
 
