@@ -129,6 +129,32 @@ blockquote {
   font-size: 0.8em;
 }
 
+// ── Skip link (accessibility) ──────────────────────────────
+.skip-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #0f6be7;
+  color: #fff;
+  padding: 0.5em 0.75em;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  left: 0.75em;
+  top: 0.75em;
+  box-shadow: 0 4px 12px rgba(15, 107, 231, 0.35);
+}
+
 // ── Publication card (used in publications.md) ─────────────
 // Applied via raw HTML <div class="pub-card"> in Markdown
 .pub-card {
