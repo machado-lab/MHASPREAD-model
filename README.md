@@ -154,7 +154,6 @@ MHASpread development and application are documented in peer-reviewed publicatio
 
 - **Spatial scope**: Model designed for farm-level networks; may require adaptation for larger-scale systems
 - **Data requirements**: Accurate population sizes, movement records, and species composition needed
-- **Parameter uncertainty**: FMD transmission parameters derived from limited field studies; sensitivity analysis recommended
 - **Control realism**: Model assumes adherence to protocol; deviations may affect outcomes
 - **Single-pathogen focus**: Not designed for multi-pathogen coinfection scenarios
 
