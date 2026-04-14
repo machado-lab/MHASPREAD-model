@@ -14,8 +14,9 @@ permalink: /
 
 MHASpread is an R-based simulation framework for modeling foot-and-mouth disease (FMD) — and other multi-host pathogens — across real-world livestock farming networks. Combining within-farm SEIR dynamics with spatial transmission kernels and animal-movement networks, it enables rigorous evaluation of outbreak response strategies under realistic uncertainty.
 
-[Explore the Model](docs/model){ .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View Publications](docs/publications){ .btn .fs-5 .mb-4 .mb-md-0 }
+{: .mb-4 }
+<a href="docs/model" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2">Explore the Model</a>
+<a href="docs/publications" class="btn fs-5 mb-4 mb-md-0">View Publications</a>
 
 ---
 

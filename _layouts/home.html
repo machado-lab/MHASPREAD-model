@@ -1,7 +1,14 @@
----
-layout: default
----
-
-<div class="home-content">
-  {{ content }}
-</div>
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  {%- include head.html -%}
+  <body>
+    {%- include skip-links.html -%}
+    {%- include header.html -%}
+    <main id="main-content" class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+    {%- include footer.html -%}
+  </body>
+</html>
